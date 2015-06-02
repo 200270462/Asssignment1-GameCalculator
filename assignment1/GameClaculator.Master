@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GameClaculator.master.cs" Inherits="assignment1.GameClaculator" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Assignment-1:Game Calculator</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
+
+    <!-- Custom StyleSheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- jQuery CDN -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header  class="navbar navbar-inverse text-primary">
+        <h2>Assignment-1</h2>
+    </header>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="game" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <footer class="navbar navbar-inverse text-center text-danger">
+        Assignment 1- Game Calculator &copy; <%= DateTime.Now.Year %> Krunalsinh Parmar
+    </footer>
+</body>
+</html>
