@@ -25,6 +25,9 @@
 <body>
     <header  class="navbar navbar-inverse text-primary">
         <h2>Assignment-1</h2>
+        <!--Try to add some bonus feature-->
+        Last Refresh / Load.
+        <h4 class="badge"><%= DateTime.Now %></h4>
     </header>
     <form id="form1" runat="server">
         <div>
@@ -32,8 +35,9 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
+    <!--Footer-->
     <footer class="navbar navbar-inverse text-center text-danger">
-        Assignment 1- Game Calculator &copy; <%= DateTime.Now.Year %> Krunalsinh Parmar
+        Assignment 1- Game Calculator &copy; <%= DateTime.Now.Year %> :Krunalsinh Parmar(200270462)
     </footer>
 </body>
 </html>
