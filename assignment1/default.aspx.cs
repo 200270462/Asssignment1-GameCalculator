@@ -20,29 +20,21 @@ namespace assignment1
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            //Calculate total number of games won.
-            int gw = 0;
-            if (rblResult1.SelectedValue == "1") { gw++; }
-            if (rblResult2.SelectedValue == "1") { gw++; }
-            if (rblResult3.SelectedValue == "1") { gw++; }
-            if (rblResult4.SelectedValue == "1") { gw++; }
+            //Calculate total number of games won and lost.
+            int gw = 0, gl = 0;
+            if (rblResult1.SelectedValue == "1") { gw++; } else { gl++; }
+            if (rblResult2.SelectedValue == "1") { gw++; } else { gl++; }
+            if (rblResult3.SelectedValue == "1") { gw++; } else { gl++; }
+            if (rblResult4.SelectedValue == "1") { gw++; } else { gl++; }
 
             //Display total number of games won.
             lblGW.Text = gw.ToString();
-
-            //Calculate total number of Lost.
-            int gl = 0;
-            if (rblResult1.SelectedValue == "0") { gl++; }
-            if (rblResult2.SelectedValue == "0") { gl++; }
-            if (rblResult3.SelectedValue == "0") { gl++; }
-            if (rblResult4.SelectedValue == "0") { gl++; }
-
 
             //Display total number of game Lost.
             lblGL.Text = gl.ToString();
 
             //Calculate the percentage of winning.
-            double wp = gw / 4.0;
+            double wp = gw / 4.0 * 100;
 
             //Display the percentage of winnig.
             lblWP.Text = wp.ToString();
@@ -81,7 +73,7 @@ namespace assignment1
             lblDOP.Text = dop.ToString();
 
             //Calculate Average Spectators.
-            int aspec = (ts / 4)*100;
+            int aspec = (ts / 4) * 100;
 
             //Display Average Spectators.
             lblAS.Text = aspec.ToString();
