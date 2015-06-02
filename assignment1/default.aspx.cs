@@ -73,7 +73,7 @@ namespace assignment1
             lblDOP.Text = dop.ToString();
 
             //Calculate Average Spectators.
-            int aspec = (ts / 4) * 100;
+            int aspec = ts / 4;
 
             //Display Average Spectators.
             lblAS.Text = aspec.ToString();
