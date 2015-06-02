@@ -23,13 +23,22 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <header  class="navbar navbar-inverse text-primary">
+    <header class="navbar navbar-inverse text-primary">
         <h2>Assignment-1</h2>
-        <!--Try to add some bonus feature-->
-        Last Refresh / Load.
-        <h4 class="badge"><%= DateTime.Now %></h4>
+        <h3 class="badge">Last Refresh / Load: <%= DateTime.Now %></h3>
     </header>
     <form id="form1" runat="server">
+        <!--Try to add some bonus feature-->
+        <div class="badge">
+            System Clock:
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <asp:Timer runat="server" Interval="600"></asp:Timer>
+                    <asp:Label ID="lblclock" runat="server" Text="Label"></asp:Label>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
         <div>
             <asp:ContentPlaceHolder ID="game" runat="server">
             </asp:ContentPlaceHolder>

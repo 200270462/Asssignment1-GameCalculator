@@ -11,7 +11,9 @@ namespace assignment1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Show the clock on heading(Bonus feature)
+            System.Threading.Thread.Sleep(60);
+            lblclock.Text = DateTime.Now.ToString();
         }
     }
 }
